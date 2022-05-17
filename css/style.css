@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #5372F0;
+}
+
+.wrapper {
+  width: 605px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px 30px 25px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+header, .content :where(i, p, span) {
+  color: #202842;
+}
+
+.wrapper header {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper .content {
+  margin: 35px 0;
+}
+
+.content .quote {
+  display: flex;
+  justify-content: center;
+}
+
+.quote i {
+  font-size: 15px;
+}
+
+.quote i:first-child {
+  margin: 3px 10px 0 0;
+}
+
+.quote i:last-child {
+  margin: 0 0 3px 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.quote .p-quote {
+  font-size: 22px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.content .author {
+  display: flex;
+  font-size: 18px;
+  margin-top: 20px;
+  font-style: italic;
+  justify-content: flex-end;
+}
+
+.author span:first-child {
+  font-family: monospace;
+  margin: -7px 5px 0 0;
+}
+
+.wrapper .buttons {
+  border-top: 1px solid #ccc;
+}
+
+.buttons .features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.features ul {
+  display: flex;
+}
+
+.features ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 47px;
+  width: 47px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #5372F0;
+  list-style: none;
+  border: 2px solid #5372F0;
+  transition: all 0.3s ease;
+}
+
+.features ul li:first-child {
+  margin-left: 0;
+}
+
+ul li:is(:hover, .active) {
+  color: #fff;
+  background-color: #5372F0;
+}
+
+ul .speech.active {
+  pointer-events: none;
+}
+
+.buttons button {
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 13px 22px;
+  border-radius: 30px;
+  background-color: #5372F0;
+}
+
+.buttons button.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.copy {
+  position: relative;
+}
+
+.copy-msg {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 12px;
+  bottom: 115%;
+}
+
+@media screen and (max-width: 620px) {
+  .wrapper {
+    width: 98%;
+  }
+  .wrapper header {
+    font-size: 28px;
+  }
+  .wrapper .content {
+    margin: 20px 0;
+  }
+  .quote .p-quote {
+    font-size: 20px;
+  }
+  .content .author {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .features ul li {
+    height: 40px;
+    width: 40px;
+  }
+  .buttons button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
